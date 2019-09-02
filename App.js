@@ -1,10 +1,8 @@
 import React, {Fragment} from 'react';
 import Navigator from './navigation/stackNavigator';
-
+import In from './screens/signIn';
 const App = () => {
-  return (
-    <Navigator/>
-  );
+  return <In />;
 };
 
 export default App;
