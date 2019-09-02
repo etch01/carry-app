@@ -1,18 +1,20 @@
-import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import React, {Component} from 'react';
+import {View, Text, StyleSheet} from 'react-native';
+import Header from '../components/header';
 
 export default class signUp extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
-
   render() {
     return (
-      <View>
+      <View style={styles.container}>
+        <Header title="تسجيل الدخول" />
         <Text> signUp </Text>
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
