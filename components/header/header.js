@@ -11,21 +11,17 @@ import {
 var {width, height} = Dimensions.get('window');
 
 const header = props => {
-  const url = '../assets/text/تسجيل_الدخول.png';
   return (
     <View style={styles.headerMainContainer}>
       <View style={styles.adjustmentContainer}>
         <TouchableOpacity
           onPress={props.backArrow}
           style={{justifyContent: 'center', flex: 1}}>
-          <Image
-            //style={styles.images}
-            source={require('../assets/icons/arrow-left.png')}
-          />
+          <Image source={require('../../assets/icons/arrow-left.png')} />
         </TouchableOpacity>
         <View style={styles.rightSide}>
           <View>
-            <Image source={require(url)} style={styles.images} />
+            <Image source={props.titleImageURL} style={styles.images} />
           </View>
           <TouchableOpacity onPress={props.menu}>
             <Image
@@ -33,7 +29,7 @@ const header = props => {
                 width: width * 0.2,
                 resizeMode: 'contain',
               }}
-              source={require('../assets/icons/menu.png')}
+              source={require('../../assets/icons/menu.png')}
             />
           </TouchableOpacity>
         </View>
@@ -47,6 +43,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#3A66B7',
     height: height / 10,
     alignItems: 'center',
+    marginBottom: height * 0.01,
   },
   adjustmentContainer: {
     width: '90%',
