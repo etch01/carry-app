@@ -1,21 +1,20 @@
-import { createAppContainer } from "react-navigation";
-import { createStackNavigator } from 'react-navigation-stack'
+import {createAppContainer} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
 import Splash from '../screens/splash';
-import SignUp from '../screens/signUp';
-
+import DrawerNavigator from './DrawerNavigator';
 
 const StackNavigator = createStackNavigator(
   {
-    Splash: { screen: Splash },
-    SignUp: { screen: SignUp },
+    Splash: {screen: Splash},
+    DrawerNavigator: {screen: DrawerNavigator},
   },
   {
-    headerMode: "none",
-    mode: "modal",
+    headerMode: 'none',
+    mode: 'modal',
     defaultNavigationOptions: {
-      gesturesEnabled: false
-    }
-  }
+      gesturesEnabled: false,
+    },
+  },
 );
 
 export default createAppContainer(StackNavigator);

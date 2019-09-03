@@ -8,7 +8,10 @@ export default class signUp extends Component {
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <Header titleImageURL={require('../assets/text/تسجيل_الدخول.png')} />
+        <Header
+          menu={() => this.props.navigation.toggleDrawer()}
+          titleImageURL={require('../assets/text/تسجيل_الدخول.png')}
+        />
         <View style={styles.logoContainer}>
           <Image source={require('../assets/Logo.png')} style={styles.logo} />
         </View>
