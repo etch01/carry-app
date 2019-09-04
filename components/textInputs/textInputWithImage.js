@@ -10,6 +10,7 @@ const InputImage = props => (
       style={styles.input}
       placeholder={props.placeholder}
       placeholderTextColor="#AFAFAF"
+      onChangeText={props.onchange}
     />
   </View>
 );

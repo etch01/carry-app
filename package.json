@@ -8,6 +8,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "formik": "1.4.0",
     "react": "16.8.6",
     "react-native": "0.60.5",
     "react-native-gesture-handler": "^1.4.1",
@@ -15,7 +16,8 @@
     "react-native-screens": "^1.0.0-alpha.23",
     "react-navigation": "^4.0.0",
     "react-navigation-drawer": "^2.0.1",
-    "react-navigation-stack": "^1.5.1"
+    "react-navigation-stack": "^1.5.1",
+    "yup": "0.26.6"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
