@@ -15,7 +15,7 @@ const rectangle = props => (
     <ImageBackground
       source={require('../../assets/buttons/Rounded_Rectangle1.png')}
       style={styles.background}>
-      <Image source={props.innerImage} />
+      <Text style={styles.title}>{props.title}</Text>
     </ImageBackground>
   </TouchableOpacity>
 );
@@ -26,6 +26,11 @@ const styles = StyleSheet.create({
     height: width * 0.1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  title: {
+    color: '#ffffff',
+    fontSize: 18,
+    fontWeight: 'bold',
   },
 });
 

@@ -10,6 +10,7 @@ import {
 import Header from '../components/header/header';
 import Input from '../components/textInputs/textInputWithImage';
 import RectangleButton from '../components/buttons/rectangle';
+import str from '../language/localize';
 
 var {width, height} = Dimensions.get('window');
 
@@ -23,7 +24,7 @@ export default class signUp extends Component {
 
   signUserIn = (username, password) => {
     if (username === '' || password === '') {
-      this.setState({errorMessage: 'من فضلك ادخل اسم المستخدم و كلمة السر'});
+      this.setState({errorMessage: str.signInEmptyFieldsError});
     }
   };
 
@@ -37,12 +38,12 @@ export default class signUp extends Component {
         <View style={styles.inputGroup}>
           <Input
             icon={require('../assets/icons/Shape2.png')}
-            placeholder="الأسم"
+            placeholder={str.username}
             onchange={text => this.setState({username: text})}
           />
           <Input
             icon={require('../assets/icons/lock-512.png')}
-            placeholder="الرقم السري"
+            placeholder={str.password}
             onchange={text => this.setState({password: text})}
           />
           <Text style={{color: 'red'}}>{this.state.errorMessage}</Text>
@@ -52,7 +53,7 @@ export default class signUp extends Component {
             onPress={() =>
               this.signUserIn(this.state.username, this.state.password)
             }
-            innerImage={require('../assets/text/تسجيل.png')}
+            title={str.signIn}
           />
         </View>
       </SafeAreaView>

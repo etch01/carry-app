@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import {DrawerActions} from 'react-navigation-drawer';
 import DrawerScreens from './drawerScreenButton/screenButton';
+import str from '../../language/localize';
 
 var {width, height} = Dimensions.get('window');
 //props.navigation.dispatch(DrawerActions.closeDrawer())
@@ -61,31 +62,31 @@ class drawerContent extends React.Component {
         </View>
         <View style={styles.screens}>
           <DrawerScreens
-            name="الرئيسية"
+            name={str.sideMenuScreens.home}
             src={require('../../assets/icons/IconFeed.png')}
           />
           <DrawerScreens
-            name="الشخصية"
+            name={str.sideMenuScreens.personal}
             src={require('../../assets/icons/IconProfile.png')}
           />
           <DrawerScreens
-            name="الطلبات"
+            name={str.sideMenuScreens.orders}
             src={require('../../assets/icons/list.png')}
           />
           <DrawerScreens
-            name="الاعدادات"
+            name={str.sideMenuScreens.settings}
             src={require('../../assets/icons/Icon_Setting.png')}
           />
           <DrawerScreens
-            name="اتصل بنا"
+            name={str.sideMenuScreens.contactUs}
             src={require('../../assets/icons/IconFriends.png')}
           />
           <DrawerScreens
-            name="الشروط و الاحكام"
+            name={str.sideMenuScreens.policy}
             src={require('../../assets/icons/729352-200.png')}
           />
           <DrawerScreens
-            name="خروج"
+            name={str.sideMenuScreens.exit}
             src={require('../../assets/icons/Icon_Logout.png')}
           />
         </View>

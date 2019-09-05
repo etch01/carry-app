@@ -12,35 +12,36 @@ import Input from '../components/textInputs/textInputWithImage';
 import RectangleButton from '../components/buttons/rectangle';
 import * as yup from 'yup';
 import {Formik} from 'formik';
+import str from '../language/localize';
 
 //Validation Schema
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 const validationSchema = yup.object().shape({
   username: yup
     .string()
-    .required('Username is required')
-    .min(3, 'Username is too short')
-    .max(24, 'Username cannot be more than 24 character')
-    .label('username'),
+    .required(str.usernameValidation.required)
+    .min(3, str.usernameValidation.min)
+    .max(24, str.usernameValidation.max)
+    .label(str.usernameValidation.label),
   password: yup
     .string()
-    .required('Password is required')
-    .min(6, 'Password should be 6 characters or more')
-    .max(24, 'Password should not be more than 24 character')
-    .label('Password'),
+    .required(str.passwordValidation.required)
+    .min(6, str.passwordValidation.min)
+    .max(24, str.passwordValidation.max)
+    .label(str.passwordValidation.label),
   confirmPassword: yup
     .string()
-    .required('Confirm Password is required')
-    .test('passwords-match', "Password doesn't match.", function(value) {
+    .required(str.repasswordValidation.required)
+    .test('passwords-match', str.repasswordValidation.test, function(value) {
       return this.parent.password === value;
     })
-    .label('Confirm Password'),
+    .label(str.repasswordValidation.label),
   email: yup
     .string()
-    .required('Email is required')
-    .email('Invalid Email !')
-    .label('Email'),
-  phone: yup.string().matches(phoneRegExp, 'Phone number is not valid'),
+    .required(str.emailValidation.required)
+    .email(str.emailValidation.email)
+    .label(str.emailValidation.label),
+  phone: yup.string().matches(phoneRegExp, str.phoneValidation),
 });
 export default class signUp extends Component {
   render() {
@@ -76,32 +77,32 @@ export default class signUp extends Component {
               <View style={styles.inputGroup}>
                 <Input
                   icon={require('../assets/icons/Shape2.png')}
-                  placeholder="الأسم"
+                  placeholder={str.name}
                   onchange={formikProps.handleChange('username')}
                 />
                 <Input
                   icon={require('../assets/icons/lock-512.png')}
-                  placeholder="الرقم السري"
+                  placeholder={str.password}
                   onchange={formikProps.handleChange('password')}
                 />
                 <Input
                   icon={require('../assets/icons/confirm_password_371113.png')}
-                  placeholder="تأكيد الرقم السري"
+                  placeholder={str.rePassword}
                   onchange={formikProps.handleChange('confirmPassword')}
                 />
                 <Input
                   icon={require('../assets/icons/27630.png')}
-                  placeholder="البريد الالكتروني"
+                  placeholder={str.email}
                   onchange={formikProps.handleChange('email')}
                 />
                 <Input
                   icon={require('../assets/icons/Telephone_copy.png')}
-                  placeholder="الهاتف"
+                  placeholder={str.phone}
                   onchange={formikProps.handleChange('phone')}
                 />
                 <Input
                   icon={require('../assets/icons/city_icon_728114.png')}
-                  placeholder="المدينه"
+                  placeholder={str.city}
                   onchange={formikProps.handleChange('city')}
                 />
                 <Text style={{color: 'red'}}>
@@ -115,7 +116,7 @@ export default class signUp extends Component {
               <View style={styles.button}>
                 <RectangleButton
                   onPress={formikProps.handleSubmit}
-                  innerImage={require('../assets/text/تسجيل.png')}
+                  title={str.signUp}
                 />
               </View>
             </React.Fragment>

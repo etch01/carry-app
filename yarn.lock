@@ -3495,6 +3495,10 @@ load-json-file@^4.0.0:
     pify "^3.0.0"
     strip-bom "^3.0.0"
 
+localized-strings@^0.2.0:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/localized-strings/-/localized-strings-0.2.3.tgz#6caed1bc0476668331ed4e96729676ae8f7a0295"
+
 locate-path@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-2.0.0.tgz#2b568b265eec944c6d9c0de9c3dbbbca0354cd8e"
@@ -4603,6 +4607,12 @@ react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6:
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.9.0.tgz#21ca9561399aad0ff1a7701c01683e8ca981edcb"
 
+react-localization@^1.0.14:
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/react-localization/-/react-localization-1.0.15.tgz#624bd0b514100488a84204e20b398750313d1708"
+  dependencies:
+    localized-strings "^0.2.0"
+
 react-native-gesture-handler@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.4.1.tgz#c38d9e57637b95e221722a79f2bafac62e3aeb21"
@@ -4611,6 +4621,12 @@ react-native-gesture-handler@^1.4.1:
     hoist-non-react-statics "^2.3.1"
     invariant "^2.2.4"
     prop-types "^15.7.2"
+
+react-native-localization@^2.1.6:
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/react-native-localization/-/react-native-localization-2.1.6.tgz#86d50a09d50495a5b9b789c3981acbd5cb0c38b7"
+  dependencies:
+    react-localization "^1.0.14"
 
 react-native-reanimated@^1.2.0:
   version "1.2.0"
