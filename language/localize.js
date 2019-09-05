@@ -47,6 +47,8 @@ let strings = new LocalizedStrings({
       policy: 'Privacy Policy',
       exit: 'Exit',
     },
+    shipping: 'shipping',
+    transfare: 'transfare',
   },
   ar: {
     name: 'الأسم',
@@ -91,6 +93,8 @@ let strings = new LocalizedStrings({
       policy: 'الشروط و الاحكام',
       exit: 'خروج',
     },
+    shipping: 'شحن',
+    transfare: 'نقل',
   },
 });
 

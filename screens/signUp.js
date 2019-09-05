@@ -60,7 +60,7 @@ export default class signUp extends Component {
             phone: '',
           }}
           onSubmit={(values, actions) => {
-            alert('All good !');
+            this.props.navigation.navigate('ShippingOrTransfer');
             setTimeout(() => {
               actions.setSubmitting(false);
             }, 1000);
