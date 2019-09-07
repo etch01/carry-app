@@ -5,15 +5,19 @@ import LocalizedStrings from 'react-native-localization';
 
 let strings = new LocalizedStrings({
   en: {
+    //Screens
     name: 'Name',
     username: 'username',
     signIn: 'Sign In',
     signUp: 'Sign Up',
+    package: 'Package',
+    //Sign Up forms
     password: 'Password',
     rePassword: 'Confirm Password',
     phone: 'Phone',
     email: 'Email',
     city: 'City',
+    //Validation
     usernameValidation: {
       required: 'Username is required',
       min: 'Username is too short',
@@ -47,14 +51,31 @@ let strings = new LocalizedStrings({
       policy: 'Privacy Policy',
       exit: 'Exit',
     },
+    //Shipping or Transfare
     shipping: 'shipping',
     transfare: 'transfare',
+    receipt: 'Receipt',
+    summary: 'Summary',
+    //package
+    packageDetails: 'Package Details',
+    whatIsTheContent: 'What is the content?',
+    notes: 'Notes',
+    notesHere: 'Add your notes here',
+    private: 'Private',
+    whatDoYouWant: 'what do you want?',
+    subscribed: 'subscribed',
+    containerType: 'container type',
+    add: 'Add',
+    chooseDestination: 'Choose destination:',
+    choosePort: 'Choose port:',
+    continue: 'Continue',
   },
   ar: {
     name: 'الأسم',
     username: 'اسم المستخدم',
     signIn: 'تسجيل الدخول',
     signUp: 'تسجيل',
+    package: 'الطرد',
     password: 'الرقم السري',
     rePassword: 'تأكيد كلمة السر',
     phone: 'الهاتف',
@@ -95,6 +116,21 @@ let strings = new LocalizedStrings({
     },
     shipping: 'شحن',
     transfare: 'نقل',
+    receipt: 'استلام',
+    summary: 'الملخص',
+    //package
+    packageDetails: 'عرف شحنتك',
+    whatIsTheContent: 'ما المحتوي؟',
+    notes: 'ملاحظات',
+    notesHere: 'ادخل ملاحظاتك هنا',
+    private: 'خاص',
+    whatDoYouWant: 'ما الذي تريده؟',
+    subscribed: 'مشترك',
+    containerType: 'نوع الحاويه',
+    add: 'أضف',
+    chooseDestination: 'اختر الواجهه:',
+    choosePort: 'اختر الميناء:',
+    continue: 'متابعه',
   },
 });
 

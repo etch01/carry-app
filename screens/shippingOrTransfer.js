@@ -3,13 +3,16 @@ import {Text, View, ImageBackground, StyleSheet} from 'react-native';
 import Buttons from '../components/buttons/rectangleLarge';
 import str from '../language/localize';
 
-const sOrT = ({params}) => (
+const sOrT = props => (
   <ImageBackground
     style={styles.background}
     source={require('../assets/background.png')}>
     <View style={styles.buttonsRow}>
       <Buttons title={str.transfare} />
-      <Buttons title={str.shipping} />
+      <Buttons
+        onPress={() => props.navigation.navigate('BottomNavigator')}
+        title={str.shipping}
+      />
     </View>
   </ImageBackground>
 );

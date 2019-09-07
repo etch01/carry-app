@@ -46,10 +46,10 @@ const validationSchema = yup.object().shape({
 export default class signUp extends Component {
   render() {
     return (
-      <SafeAreaView style={styles.container}>
+      <View style={styles.container}>
         <Header
           menu={() => this.props.navigation.toggleDrawer()}
-          titleImageURL={require('../assets/text/تسجيل_الدخول.png')}
+          title={str.signUp}
         />
         <Formik
           initialValues={{
@@ -122,7 +122,7 @@ export default class signUp extends Component {
             </React.Fragment>
           )}
         </Formik>
-      </SafeAreaView>
+      </View>
     );
   }
 }

@@ -16,12 +16,18 @@ const header = props => {
       <View style={styles.adjustmentContainer}>
         <TouchableOpacity
           onPress={props.backArrow}
-          style={{justifyContent: 'center', flex: 1}}>
-          <Image source={require('../../assets/icons/arrow-left.png')} />
+          style={{
+            justifyContent: 'center',
+            flex: 1,
+          }}>
+          <Image
+            style={{marginLeft: (width * 0.1) / 2}}
+            source={require('../../assets/icons/arrow-left.png')}
+          />
         </TouchableOpacity>
         <View style={styles.rightSide}>
           <View>
-            <Image source={props.titleImageURL} style={styles.images} />
+            <Text style={styles.title}>{props.title}</Text>
           </View>
           <TouchableOpacity onPress={props.menu}>
             <Image
@@ -46,20 +52,22 @@ const styles = StyleSheet.create({
     marginBottom: height * 0.01,
   },
   adjustmentContainer: {
-    width: '90%',
+    width: '100%',
     height: '100%',
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
   rightSide: {
-    justifyContent: 'center',
     alignItems: 'center',
+    justifyContent: 'flex-end',
     flexDirection: 'row',
+    padding: 0,
     flex: 1,
   },
-  images: {
-    width: width * 0.3,
-    resizeMode: 'contain',
+  title: {
+    color: '#FFFFFF',
+    fontWeight: 'bold',
+    fontSize: 24,
   },
 });
 

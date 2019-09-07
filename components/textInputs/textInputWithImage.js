@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     borderColor: '#6486C6',
     borderWidth: 1,
     borderRadius: 10,
-    flexDirection: 'row-reverse',
+    flexDirection: 'row',
     alignItems: 'center',
   },
   input: {
@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     textAlign: 'right',
     fontSize: 20,
     marginRight: (height * 1) / 100,
+    marginLeft: (height * 1) / 100,
   },
 });
 
