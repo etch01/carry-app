@@ -8,9 +8,17 @@ const sOrT = props => (
     style={styles.background}
     source={require('../assets/background.png')}>
     <View style={styles.buttonsRow}>
-      <Buttons title={str.transfare} />
       <Buttons
-        onPress={() => props.navigation.navigate('BottomNavigator')}
+        title={str.transfare}
+        onPress={() =>
+          props.navigation.navigate('Packages', {screen: 'second'})
+        }
+      />
+      <Buttons
+        onPress={
+          (() => props.navigation.navigate('BottomNavigator'),
+          {screen: 'first'})
+        }
         title={str.shipping}
       />
     </View>

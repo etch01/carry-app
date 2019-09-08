@@ -8,9 +8,9 @@ function RadioButton(props) {
       <View
         style={[
           {
-            height: 20,
-            width: 20,
-            borderRadius: 10,
+            height: 16,
+            width: 16,
+            borderRadius: 8,
             borderWidth: 1,
             borderColor: '#A2BDF2',
             alignItems: 'center',
@@ -21,15 +21,17 @@ function RadioButton(props) {
         {props.selected ? (
           <View
             style={{
-              height: 12,
-              width: 12,
-              borderRadius: 6,
+              height: 10,
+              width: 10,
+              borderRadius: 5,
               backgroundColor: '#80E020',
             }}
           />
         ) : null}
       </View>
-      <Text style={{color: props.selected ? '#ACC5F3' : '#C8C8C8'}}>
+      <Text
+        adjustsFontSizeToFit={Boolean}
+        style={{color: props.selected ? '#ACC5F3' : '#C8C8C8'}}>
         {props.radioText}
       </Text>
     </View>

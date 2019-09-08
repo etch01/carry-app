@@ -69,6 +69,12 @@ let strings = new LocalizedStrings({
     chooseDestination: 'Choose destination:',
     choosePort: 'Choose port:',
     continue: 'Continue',
+    //package2
+    envelope: 'Envelope',
+    breakable: 'Breakable',
+    cold: 'Cold',
+    keeper: 'Keeper',
+    extraHelp: 'Extra Help',
   },
   ar: {
     name: 'الأسم',
@@ -131,6 +137,12 @@ let strings = new LocalizedStrings({
     chooseDestination: 'اختر الواجهه:',
     choosePort: 'اختر الميناء:',
     continue: 'متابعه',
+    //package2
+    envelope: 'ظرف',
+    breakable: 'قابل للكسر',
+    cold: 'بارد',
+    keeper: 'حافظه',
+    extraHelp: 'مساعده اضافية',
   },
 });
 
